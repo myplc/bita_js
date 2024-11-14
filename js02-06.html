@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach</title>
+    <script>
+      const arr = [11, 22, 33, 44, 55, 66];
+
+      arr.forEach((v) => {
+        if (v % 2 == 0) {
+          console.log(v);
+        }
+      });
+
+      const play = [
+        "밥먹자",
+        "뛰놀자",
+        "공부하자",
+        "잠자자",
+        "게임하자",
+        "사귀자",
+      ];
+      const xkey = ["식사", "플레이", "스터디", "수면", "춤", "오락", "연인"];
+      let obj = {};
+      play.forEach((v, i) => {
+        obj[xkey[i]] = v;
+      });
+      console.log(obj);
+
+      //   arr.forEach(value=>console.log(value))
+      //   arr.forEach(function (value) {
+      //     console.log("value:", value);
+      //   });
+    </script>
+  </head>
+  <body></body>
+</html>

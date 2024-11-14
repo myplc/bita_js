@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+    <script>
+      // document.body.innerHTML += forH1("이제 시작해"); // 아직 forH1 생성전에 호출 에러
+      const forH1 = (text) => `<h1>${text}</h1>`; // 함수표현식
+      // document.body.innerHTML += forH1("난 헤드부분이야."); // 아직 body 생성전에 호출 에러
+    </script>
+  </head>
+  <body>
+    <script>
+      document.body.innerHTML += forH1("안녕 반가워");
+    </script>
+    <div></div>
+    <script>
+      document.body.innerHTML += forH1("그래서 말인데...");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+    <script>
+      console.log(str);
+      var str = "안녕";
+
+      function forH1(text) {
+        return `<h1>${text}</h1>`;
+      }
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      document.body.innerHTML = forH1("안녕 반가워");
+      document.body.innerHTML += forH1("그래서 말인데...");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>확률</title>
+  </head>
+  <body>
+    <h1>아이템 확률</h1>
+    <div id="text">로딩중...</div>
+
+    <script>
+      const ran = Math.floor(Math.random() * 100);
+      const div = document.getElementById("text");
+      div.textContent = "데이터가 들어옴";
+
+      if (ran < 10) {
+        div.textContent = `당첨 ${ran}`;
+      } else {
+        div.textContent = `꽝!! ${ran}`;
+      }
+    </script>
+  </body>
+</html>

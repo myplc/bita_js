@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서속성조작</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cats = document.querySelectorAll(".cats");
+
+        // cats.forEach((v,i,a))
+        cats.forEach((cat, index) => {
+          const widthValue = (index + 1) * 100;
+          const catUrl = `https://placecats.com/${widthValue}/400`;
+          cat.src = catUrl;
+        });
+
+        // console.log(cats);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- img.cats*6 -->
+    <img src="xx" alt="a" class="cats" />
+    <img src="aa" alt="b" class="cats" />
+    <img src="cc" alt="c" class="cats" />
+    <img src="ee" alt="d" class="cats" />
+    <img src="tt" alt="e" class="cats" />
+    <img src="ww" alt="f" class="cats" />
+  </body>
+</html>

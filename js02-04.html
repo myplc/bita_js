@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스코프, 함수스코프</title>
+    <script>
+      let pi = 3.14;
+      console.log(`1. 파이값은 ${pi} 이다.`);
+      {
+        let pi = 3.141592;
+        console.log(`2. 스코프내 파이값은 ${pi} 이다.`);
+      }
+      console.log(`3. 파이값은 ${pi} 이다.`);
+
+      function sample() {
+        let pi = 3.1415555555;
+        console.log(`4. 함수내 파이값은 ${pi} 이다.`);
+      }
+      sample();
+      console.log(`5. 파이값은 ${pi} 이다.`);
+
+      function myscope() {
+        var a = "나는 var의 a 입니다.";
+        console.log(a);
+        {
+          var b = "나는 var의 b 입니다.";
+          let c = "나는 let의 c 입니다.";
+        }
+        console.log(b);
+        console.log(c);
+      }
+      myscope();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체내용제어</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const aa = document.querySelector("#a");
+        const bb = document.querySelector("#b");
+        const str = `<h1>textContent 속성일까 innerHTML 일까</h1>`;
+        aa.textContent = str;
+        bb.innerHTML = str;
+      });
+    </script>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+  </body>
+</html>
