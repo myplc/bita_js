@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      div {
+        margin: 0;
+        padding: 0;
+        background: url("https://t1.daumcdn.net/cfile/tistory/13045F404D7C365D23");
+        width: 155px;
+        height: 154px;
+      }
+      .zzi {
+        background-position: -136px, 0;
+        width: 141px;
+      }
+      .bba {
+        background-position: -280px, 0;
+      }
+    </style>
     <!-- CDN example (jsDelivr) -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script>
@@ -11,10 +27,13 @@
       const ms = now.get("ms");
       const random = ms % 3;
       if (random == 0) {
+        document.write(`<div class="muk"></div>`);
       }
       if (random == 1) {
+        document.write(`<div class="zzi"></div>`);
       }
       if (random == 2) {
+        document.write(`<div class="bba"></div>`);
       }
       console.log(now);
     </script>

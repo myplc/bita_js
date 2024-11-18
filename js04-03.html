@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전개연산자와 map의 속도 테스트</title>
+    <script>
+      const arr = Array(1000)
+        .fill(0)
+        .map((v, i) => i + 1);
+
+      console.time("전개연산자");
+      const arr_s = [...arr];
+      console.timeEnd("전개연산자");
+      console.time("map()으로 생성");
+      const arr_m = arr.map((v) => v);
+      console.timeEnd("map()으로 생성");
+      console.time("filter()로 생성");
+      const arr_f = arr.filter((v) => true);
+      console.timeEnd("filter()로 생성");
+      console.log(arr_s);
+      console.log(arr_m);
+      console.log(arr_f);
+      console.log(
+        "arr_s,arr_m,arr_f 가 서로 다른 주소?:",
+        (arr_s == arr_m) == arr_f
+      );
+      // 배열 내용을 문자열로 변환하여 비교
+      console.log(
+        "arr_s == arr_m:",
+        JSON.stringify(arr_s) === JSON.stringify(arr_m)
+      );
+      console.log(
+        "arr_s == arr_f:",
+        JSON.stringify(arr_s) === JSON.stringify(arr_f)
+      );
+      console.log(
+        "arr_m == arr_f:",
+        JSON.stringify(arr_m) === JSON.stringify(arr_f)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

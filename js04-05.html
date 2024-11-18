@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>응용</title>
+    <script>
+      const arr = Array(100)
+        .fill(0)
+        .map((v, i) => i + 1);
+
+      /* filter */
+      // 1 부터 100 까지 값중
+      // 20부터 90까지 짝수로 구성된 배열을 만들고
+      // 거기서 35보다 큰 수중에
+      // 10의 배수만 찾아서
+
+      const step1 = (v) =>
+        v >= 20 && v <= 90 && v % 2 == 0 && v % 10 == 0 && v > 35;
+      const s1 = arr.filter(step1);
+      console.log(s1);
+
+      /* map */
+      // 각요소를 2배씩 곱하고
+      const s2 = s1.map((v) => v * 2);
+      console.log(s2);
+
+      /* forEach */
+      // 한줄에 한요소씩 출력하라.
+      s2.forEach((v) => console.log(v));
+    </script>
+  </head>
+  <body></body>
+</html>

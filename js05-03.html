@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머기능</title>
+    <script>
+      let count = 0;
+      const cText = () => {
+        console.log("반가워요!!", count++);
+      };
+      //   const t1 = setTimeout(cText, 3000);
+      //   console.log(t1); // 두번째 인자는 시간  ms 단위
+
+      const ti1 = setInterval(cText, 1000);
+      console.log(ti1);
+
+      setTimeout(() => {
+        clearInterval(ti1);
+        console.log("반복타이머가 종료되었습니다.");
+      }, 10000);
+    </script>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>setTimeout(함수,시간) : 특정시간 후에 함수를 한번 호출 합니다.</li>
+        <li>setInterval(함수,시간) : 특정시간마다 함수를 호출 합니다.</li>
+        <li>
+          clearTimeout(타이머ID) : setTimeout() 함수로 설정한 타이머를
+          제거합니다.
+        </li>
+        <li>
+          clearInterval(타이머ID) : setInterval()함수로 설정한 타이머를
+          제거합니다.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
