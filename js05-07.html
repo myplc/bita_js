@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        padding: 5px;
+        background-color: aquamarine;
+      }
+    </style>
+    <script>
+      function con(event) {
+        console.log(event);
+        console.log(event.id);
+        console.log(event.className);
+      }
+      function con2(event) {
+        console.log(event.textContent);
+      }
+      function inc(e) {
+        console.log(e.value);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="divId" class="divClass" onclick="con(this)">색상버튼</div>
+    <button onclick="alert('반가워요!')">동작</button>
+    <button id="bt1" class="button1" onclick="con(this)">테스트버튼1</button>
+    <button onclick="con2(this)">테스트버튼2</button>
+    <hr />
+    <input type="text" onkeyup="inc(this)" />
+  </body>
+</html>

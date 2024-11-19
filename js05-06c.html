@@ -10,6 +10,7 @@
       }
       h1 {
         display: inline-block;
+        background-color: aquamarine;
         border-radius: 15px;
         padding: 5px;
         margin: 10px auto;
@@ -18,39 +19,17 @@
   </head>
   <body>
     <h1 id="op">새로운 도전!!</h1>
-    <br />
-    <button onclick="fadeIn()">동작1</button>
-    <button onclick="color()">동작2</button>
     <script>
       const h1 = document.getElementById("op");
       let opacity = 0;
-      let rgb = 0;
       function fadeIn() {
         opacity += 0.1;
         h1.style.opacity = opacity;
         if (opacity <= 1) {
           setTimeout(fadeIn, 100);
         }
-        if (opacity > 1) {
-          // setTimeout(() => {
-          opacity = 0;
-          h1.style.opacity = 0;
-          // }, 1000);
-        }
-        console.log(opacity);
       }
-      function color() {
-        rgb += 1;
-        h1.style.backgroundColor = `rgb(${100},${rgb},${100})`;
-        if (rgb < 256) {
-          setTimeout(color, 30);
-        }
-        if (rgb == 255) {
-          rgb = 0;
-        }
-      }
-      // fadeIn();
-      // color();
+      fadeIn();
     </script>
   </body>
 </html>
